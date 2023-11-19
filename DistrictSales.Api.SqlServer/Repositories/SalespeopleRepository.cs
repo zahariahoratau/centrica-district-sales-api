@@ -29,7 +29,7 @@ public class SalespeopleRepository : ISalespeopleRepository
 
         return salespeople
             .Select(salesperson => salesperson.MapToSalesperson())
-            .ToImmutableList();
+            .ToImmutableArray();
     }
 
     public async Task<IImmutableList<Salesperson>> GetAllSecondaryByDistrictIdAsync(Guid districtId, CancellationToken cancellationToken)
@@ -49,7 +49,7 @@ public class SalespeopleRepository : ISalespeopleRepository
 
         return salespeople
             .Select(salesperson => salesperson.MapToSalesperson())
-            .ToImmutableList();
+            .ToImmutableArray();
     }
 
     public async Task<Salesperson> GetByIdAsync(Guid id, CancellationToken cancellationToken)

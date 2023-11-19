@@ -39,7 +39,7 @@ public class DistrictsRepository : IDistrictsRepository
                     )
             )
             .ToEnumerable()
-            .ToImmutableList();
+            .ToImmutableArray();
     }
 
     public async Task<District> GetByIdAsync(Guid id, CancellationToken cancellationToken)
