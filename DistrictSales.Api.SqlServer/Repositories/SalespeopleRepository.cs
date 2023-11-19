@@ -4,11 +4,11 @@ using Dapper;
 using DistrictSales.Api.Domain.Exceptions;
 using DistrictSales.Api.Domain.Models;
 using DistrictSales.Api.Domain.Repositories;
+using DistrictSales.Api.SqlServer.Constants;
 using DistrictSales.Api.SqlServer.Factories;
 using DistrictSales.Api.SqlServer.Helpers;
 using DistrictSales.Api.SqlServer.Mapping;
 using DistrictSales.Api.SqlServer.Models;
-using DistrictSales.Api.SqlServer.Sql;
 
 namespace DistrictSales.Api.SqlServer.Repositories;
 
@@ -111,7 +111,7 @@ public class SalespeopleRepository : ISalespeopleRepository
                 )
             );
 
-        if (affectedRows == 0)
+        if (affectedRows is 0)
             throw new ObjectNotFoundException($"Salesperson with Id: {updateSalesperson.Id} could not be found.");
     }
 
@@ -130,7 +130,7 @@ public class SalespeopleRepository : ISalespeopleRepository
                 )
             );
 
-        if (affectedRows == 0)
+        if (affectedRows is 0)
             throw new ObjectNotFoundException($"Salesperson with Id: {id} could not be found.");
     }
 }

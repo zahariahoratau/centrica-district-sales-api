@@ -7,7 +7,7 @@ public sealed class DateOnlyNotInFutureAttribute : ValidationAttribute
     public override bool IsValid(object? value)
     {
         // Automatically pass if value is null. RequiredAttribute should be used to assert a value is not empty.
-        if (value == null) return true;
+        if (value is null) return true;
 
         if (value.GetType() != typeof(DateOnly)) return false;
 
