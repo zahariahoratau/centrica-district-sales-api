@@ -1,6 +1,6 @@
 ﻿namespace DistrictSales.Api.Mapping;
 
-public static class DtoToDomainMapping
+internal static class DtoToDomainMapping
 {
     public static CreateSalesperson MapToCreateSalesperson(this CreateSalespersonRequestV1 salespersonResponse)
     {

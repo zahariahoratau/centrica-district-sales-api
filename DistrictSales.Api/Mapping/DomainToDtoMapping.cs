@@ -1,6 +1,6 @@
 ﻿namespace DistrictSales.Api.Mapping;
 
-public static class DomainToDtoMapping
+internal static class DomainToDtoMapping
 {
     public static DistrictResponseV1 MapToDistrictResponseV1(this District district)
     {
