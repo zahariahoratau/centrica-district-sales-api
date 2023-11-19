@@ -1,6 +1,4 @@
 ﻿using Dapper;
-using DistrictSales.Api.Domain.Repositories;
-using DistrictSales.Api.SqlServer.Factories;
 using DistrictSales.Api.SqlServer.Repositories;
 using DistrictSales.Api.SqlServer.Repositories.Decorators;
 using DistrictSales.Api.SqlServer.TypeHandlers;

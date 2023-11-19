@@ -1,9 +1,6 @@
-﻿using DistrictSales.Api.Domain.Models;
-using DistrictSales.Api.SqlServer.Models;
+﻿namespace DistrictSales.Api.SqlServer.Mapping;
 
-namespace DistrictSales.Api.SqlServer.Mapping;
-
-public static class DbToDomainMapping
+internal static class DbToDomainMapping
 {
     public static District MapToDistrict(
         this DbDistrict dbDistrict,

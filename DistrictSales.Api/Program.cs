@@ -3,7 +3,7 @@ using DistrictSales.Api.SqlServer;
 using Serilog;
 
 Log.Logger = new LoggerConfiguration()
-    .MinimumLevel.Debug()
+    .MinimumLevel.Information()
     .WriteTo.Console()
     .CreateLogger();
 
@@ -23,11 +23,8 @@ builder.Services.AddSwaggerGen(c => c.UseDateOnlyTimeOnlyStringConverters());
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 

@@ -4,7 +4,7 @@ using DistrictSales.Api.Domain.Exceptions;
 
 namespace DistrictSales.Api.Middleware;
 
-public class GlobalExceptionMiddleware
+internal class GlobalExceptionMiddleware
 {
     private readonly RequestDelegate _next;
 

@@ -1,4 +1,4 @@
-﻿namespace DistrictSales.Api.SqlServer.Sql;
+﻿namespace DistrictSales.Api.SqlServer.Constants;
 
 internal static class SqlFileNames
 {

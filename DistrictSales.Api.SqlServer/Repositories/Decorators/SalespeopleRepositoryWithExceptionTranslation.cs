@@ -1,7 +1,4 @@
 ﻿using System.Collections.Immutable;
-using DistrictSales.Api.Domain.Exceptions;
-using DistrictSales.Api.Domain.Models;
-using DistrictSales.Api.Domain.Repositories;
 
 namespace DistrictSales.Api.SqlServer.Repositories.Decorators;
 

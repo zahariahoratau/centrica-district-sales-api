@@ -1,9 +1,6 @@
-﻿using DistrictSales.Api.Domain.Models;
-using DistrictSales.Api.Dto.V1.Requests;
+﻿namespace DistrictSales.Api.Mapping;
 
-namespace DistrictSales.Api.Mapping;
-
-public static class DtoToDomainMapping
+internal static class DtoToDomainMapping
 {
     public static CreateSalesperson MapToCreateSalesperson(this CreateSalespersonRequestV1 salespersonResponse)
     {

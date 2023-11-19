@@ -1,6 +1,4 @@
 ﻿using System.Collections.Immutable;
-using DistrictSales.Api.Domain.Models;
-using DistrictSales.Api.Domain.Repositories;
 using Microsoft.Extensions.Logging;
 using Polly;
 using Polly.Retry;
