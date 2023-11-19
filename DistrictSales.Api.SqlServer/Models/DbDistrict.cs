@@ -1,6 +1,6 @@
 ﻿namespace DistrictSales.Api.SqlServer.Models;
 
-public record DbDistrict(
+internal record DbDistrict(
     Guid Id,
     Guid PrimarySalespersonId,
     string Name,

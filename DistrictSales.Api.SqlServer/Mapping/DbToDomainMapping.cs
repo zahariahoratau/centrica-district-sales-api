@@ -1,6 +1,6 @@
 ﻿namespace DistrictSales.Api.SqlServer.Mapping;
 
-public static class DbToDomainMapping
+internal static class DbToDomainMapping
 {
     public static District MapToDistrict(
         this DbDistrict dbDistrict,

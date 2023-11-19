@@ -3,7 +3,7 @@ using Serilog;
 
 namespace DistrictSales.Api.SqlServer.Helpers;
 
-public static class SqlHelper
+internal static class SqlHelper
 {
     public static string ReadSqlFile(string fileName)
     {
