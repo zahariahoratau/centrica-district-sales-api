@@ -1,7 +1,4 @@
-﻿using DistrictSales.Api.Domain.Models;
-using DistrictSales.Api.Dto.V1.Responses;
-
-namespace DistrictSales.Api.Mapping;
+﻿namespace DistrictSales.Api.Mapping;
 
 public static class DomainToDtoMapping
 {

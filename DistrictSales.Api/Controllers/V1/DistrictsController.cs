@@ -1,8 +1,4 @@
 ﻿using System.Collections.Immutable;
-using DistrictSales.Api.Domain.Models;
-using DistrictSales.Api.Domain.Repositories;
-using DistrictSales.Api.Dto.V1.Requests;
-using DistrictSales.Api.Dto.V1.Responses;
 using DistrictSales.Api.Mapping;
 using Microsoft.AspNetCore.Mvc;
 
