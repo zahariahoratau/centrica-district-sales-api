@@ -1,14 +1,6 @@
 ﻿using System.Collections.Immutable;
 using System.Data;
 using Dapper;
-using DistrictSales.Api.Domain.Exceptions;
-using DistrictSales.Api.Domain.Models;
-using DistrictSales.Api.Domain.Repositories;
-using DistrictSales.Api.SqlServer.Factories;
-using DistrictSales.Api.SqlServer.Helpers;
-using DistrictSales.Api.SqlServer.Mapping;
-using DistrictSales.Api.SqlServer.Models;
-using DistrictSales.Api.SqlServer.Sql;
 
 namespace DistrictSales.Api.SqlServer.Repositories;
 
