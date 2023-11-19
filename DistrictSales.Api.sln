@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DistrictSales.Api.Domain", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DistrictSales.Api.SqlServer", "DistrictSales.Api.SqlServer\DistrictSales.Api.SqlServer.csproj", "{C711E64D-119C-4BE0-97A9-6476C4C0FBD3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DistrictSales.Api.Dto", "DistrictSales.Api.Dtos\DistrictSales.Api.Dto.csproj", "{9828D694-7DE3-4A58-881D-0C84E2544F81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DistrictSales.Api.Dto", "DistrictSales.Api.Dto\DistrictSales.Api.Dto.csproj", "{9828D694-7DE3-4A58-881D-0C84E2544F81}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Items", "Items", "{D384FABF-A094-4C76-8271-7B3899C0BEC0}"
 	ProjectSection(SolutionItems) = preProject
