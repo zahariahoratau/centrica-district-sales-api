@@ -35,7 +35,7 @@ public class DistrictsRepositoryWithExceptionTranslation : IDistrictsRepository
         }
         catch (SqlException exception)
         {
-            if (exception.Number == SqlErrorNumbers.ConstraintViolation)
+            if (exception.Number is SqlErrorNumbers.ConstraintViolation)
                 throw new ObjectNotFoundException($"Salesperson with Id: {createDistrict.PrimarySalespersonId} could not be found.");
 
             throw;
@@ -50,10 +50,15 @@ public class DistrictsRepositoryWithExceptionTranslation : IDistrictsRepository
         }
         catch (SqlException exception)
         {
-            if (exception.Number == SqlErrorNumbers.ConstraintViolation)
-                throw new ObjectNotFoundException($"Salesperson with Id: {updateDistrict.PrimarySalespersonId} could not be found.");
-
-            throw;
+            switch (exception.Number)
+            {
+                case SqlErrorNumbers.ConstraintViolation:
+                    throw new ObjectNotFoundException($"Salesperson with Id: {updateDistrict.PrimarySalespersonId} could not be found.");
+                case SqlErrorNumbers.UserDefinedError:
+                    throw new DuplicateEntryException($"The salesperson with Id: {updateDistrict.PrimarySalespersonId} is already assigned as secondary to this district. Please remove the secondary assignment first.");
+                default:
+                    throw;
+            }
         }
     }
 
@@ -68,13 +73,17 @@ public class DistrictsRepositoryWithExceptionTranslation : IDistrictsRepository
         }
         catch (SqlException exception)
         {
-            if (exception.Number == SqlErrorNumbers.ConstraintViolation)
-                throw new ObjectNotFoundException("Either the district or the salesperson could not be found.");
-
-            if (exception.Number == SqlErrorNumbers.DuplicateKeyInsert)
-                throw new DuplicateEntryException($"The salesperson with Id: {salespersonId} is already assigned as secondary to this district.");
-
-            throw;
+            switch (exception.Number)
+            {
+                case SqlErrorNumbers.ConstraintViolation:
+                    throw new ObjectNotFoundException("Either the district or the salesperson could not be found.");
+                case SqlErrorNumbers.DuplicateKeyInsert:
+                    throw new DuplicateEntryException($"The salesperson with Id: {salespersonId} is already assigned as secondary to this district.");
+                case SqlErrorNumbers.UserDefinedError:
+                    throw new DuplicateEntryException($"The salesperson with Id: {salespersonId} is already assigned as primary to this district. Please remove the primary assignment first.");
+                default:
+                    throw;
+            }
         }
     }
 
