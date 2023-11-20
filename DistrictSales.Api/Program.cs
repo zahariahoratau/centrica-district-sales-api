@@ -1,3 +1,4 @@
+using System.Reflection;
 using DistrictSales.Api.Middleware;
 using DistrictSales.Api.SqlServer;
 using Serilog;
@@ -19,7 +20,10 @@ builder.Services
     .AddControllers()
     .AddJsonOptions(options => options.AllowInputFormatterExceptionMessages = false);
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(c => c.UseDateOnlyTimeOnlyStringConverters());
+builder.Services.AddSwaggerGen(c => {
+    c.UseDateOnlyTimeOnlyStringConverters();
+    c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, $"{Assembly.GetExecutingAssembly().GetName().Name}.xml"));
+});
 
 var app = builder.Build();
 
