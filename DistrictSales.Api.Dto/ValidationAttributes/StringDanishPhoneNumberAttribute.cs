@@ -13,6 +13,6 @@ public sealed class StringDanishPhoneNumberAttribute : ValidationAttribute
         if (value.GetType() != typeof(string)) return false;
 
         string phoneNumber = (string)value;
-        return Regex.IsMatch(phoneNumber, @"\d{8}");
+        return Regex.IsMatch(phoneNumber, @"^\d{8}$");
     }
 }

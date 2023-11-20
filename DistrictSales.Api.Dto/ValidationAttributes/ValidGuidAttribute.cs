@@ -2,7 +2,7 @@
 
 namespace DistrictSales.Api.Dto.ValidationAttributes;
 
-internal class ValidGuidAttribute : ValidationAttribute
+public sealed class ValidGuidAttribute : ValidationAttribute
 {
     public override bool IsValid(object? value)
     {
